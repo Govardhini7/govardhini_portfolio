@@ -1,0 +1,166 @@
+*, body{margin:0;padding:0;font-family:ArbutusSlab-Regular;}
+@font-face{font-family:ArbutusSlab-Regular;src:url(../fonts/ArbutusSlab-Regular.ttf) format('truetype');font-display:swap;}
+
+.welcome{padding:150px 0;background:#000;color:#fff;}
+h1{    font-size: 66px !important;margin-bottom: 20px;}
+.welcome p {
+    margin: 0 0 30px !important;
+    font-size: 16px;
+}
+.welcome img{width: 250px;
+    border-radius: 130px;}
+.home-btn{font-size: 18px;background: #207561;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;}
+.home-btn:hover{color: #ffffff;text-decoration: none;
+    background: #207561;}
+.services{padding:50px 0 ;}
+.title{padding:20px 0 10px;}
+.service {
+    padding: 30px;margin-bottom:30px;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 2px 0px rgb(0 0 0 / 10%);
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    top: 0;display: flex;
+    position: relative;
+}
+.icon .icon-style, .icon .fa{position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #207561;
+    display: inline-block;
+    color: #fff;
+    text-align: center;}
+.icon-style:before {
+    content: "\e41d";
+}
+.icon{display: inline-flex;margin-right: 20px;}
+.text h3{font-size:20px;margin-top: 0px;
+    margin-bottom: 10px;}
+.text p, footer p a, footer p a:hover{color:#666;line-height: 1.7;
+    font-size: 16px;}
+.service:hover {
+    -webkit-box-shadow: 0 8px 50px -5px rgb(0 0 0 / 10%);
+    box-shadow: 0 8px 50px -5px rgb(0 0 0 / 10%);
+    top: -2px;
+}
+.image{display: block;position: relative;}
+.image span, .fa-search{position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    font-size: 1.7rem;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;}
+.icon-search2:before {
+    content: "\e8b6";
+}
+.image img{position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;}
+.image:after{z-index: 2;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;}
+.image:hover:after{
+    opacity: 1;
+    visibility: visible;
+}
+.image:hover .fa-search{
+	    opacity: 1;
+    visibility: visible;
+}
+.image-box{    padding-bottom: 30px;}
+footer{padding:60px 0;}
+footer h3{    margin-bottom: 20px;
+    border-bottom: 2px dotted #207561;
+    padding-bottom: 10px;}
+.services h2{margin-bottom: 20px;}
+.bottom-text {
+    padding: 20px 0 10px;
+    background: #207561;
+    color: #fff;
+}
+footer a:hover{text-decoration: none;color: #207561 !important;}
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #000;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 60px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #207561;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+.right{float:right;}
+.timeline a{color: #207561;font-size: 20px;}
+.timeline a:hover{color: #207561;text-decoration:none;}
+input, textarea{    width: 80%;
+    padding: 15px;
+    margin-bottom: 15px !important;
+    border: 1px solid #207561;
+    border-radius: 30px;}
+@media(max-width:767px){
+    .services .text {
+        text-align: left !important;
+    }
+    .text-left,footer, .about p{text-align: center !important;}
+    h1 {font-size: 48px !important;}
+    .welcome {padding: 80px 0;}
+    .services, footer{ padding: 60px 0 20px;}
+}
+@media(min-width:768px) and (max-width:990px){
+.nav>li>a{}
+}
+@media(max-width:990px){
+
+}
+@media(min-width:990px) and (max-width:1199px){
+.nav>li>a{padding: 10px 45px !important;}
+}
