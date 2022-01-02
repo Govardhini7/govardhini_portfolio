@@ -2,8 +2,8 @@
       if(isset($_POST['name'])){
           
        require_once('PHPMailer/PHPMailerAutoload.php');  
-  
-          console.log("hello");
+        require_once('PHPMailer/class.phpmailer.php');
+          
         $_Name=$_POST['name'];
         $_Email=$_POST['email'];
          $_Phone=$_POST['phone'];
