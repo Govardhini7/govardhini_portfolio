@@ -43,8 +43,12 @@ h1{    font-size: 66px !important;margin-bottom: 20px;}
 .icon{display: inline-flex;margin-right: 20px;}
 .text h3{font-size:20px;margin-top: 0px;
     margin-bottom: 10px;}
-.text p, footer p a, footer p a:hover{color:#666;line-height: 1.7;
-    font-size: 16px;}
+.text p, footer p a, footer p a:hover {
+    color: #666;
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 16px;
+}
 .service:hover {
     -webkit-box-shadow: 0 8px 50px -5px rgb(0 0 0 / 10%);
     box-shadow: 0 8px 50px -5px rgb(0 0 0 / 10%);
@@ -138,15 +142,52 @@ ul.timeline > li:before {
     height: 20px;
     z-index: 400;
 }
-.right{float:right;}
-.timeline a{color: #207561;font-size: 20px;}
+.right {
+    float: right;
+    font-size: 20px;
+    color: #207561;
+}
+.clear {clear:right}
+.timeline a, .timeline div {
+    color: #207561;
+    font-size: 20px;
+    display: inline;
+}
 .timeline a:hover{color: #207561;text-decoration:none;}
-input, textarea{    width: 80%;
+input, textarea {position:relative;
+    width: 100%;
     padding: 15px;
     margin-bottom: 15px !important;
-    border: 1px solid #207561;
-    border-radius: 30px;}
-@media(max-width:767px){
+    border: none;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+     border-radius: 30px;
+}
+    input:before, textarea:before {
+        content: "";
+        position: absolute;left:0;top:0;
+        display: block;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+/*input:hover, textarea:hover {
+        border: 1px solid #207561;
+    }*/
+.captcha {position:relative;
+}
+#txtCaptchaDiv {
+    position: absolute;
+    background: #207561;
+    padding: 15px;
+    right: 0;
+    border-radius: 25px;
+    bottom: 16px;
+    color: #fff;
+}
+input[type=submit] {
+    width: auto;
+}
+@media(max-width:767px) {
     .services .text {
         text-align: left !important;
     }
@@ -154,9 +195,13 @@ input, textarea{    width: 80%;
     h1 {font-size: 48px !important;}
     .welcome {padding: 80px 0;}
     .services, footer{ padding: 60px 0 20px;}
-}
+    .timeline a, .timeline div {display: inherit;}
+    }
 @media(min-width:768px) and (max-width:990px){
 .nav>li>a{}
+    .text-left, footer, .about p {
+        text-align: center !important;
+    }
 }
 @media(max-width:990px){
 
